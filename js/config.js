@@ -2,7 +2,7 @@
 
 // Bubble Pop Garden — tuning knobs
 // Keep CACHE in sw.js in sync: 'bubble-pop-garden-' + GAME_VERSION
-const GAME_VERSION = '1.0.000';
+const GAME_VERSION = '1.0.001';
 const GAME_VERSION_LABEL = 'v' + GAME_VERSION;
 const GAME_NAME = 'Bubble Pop Garden';
 
