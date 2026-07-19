@@ -1,0 +1,26 @@
+{
+  "name": "Bubble Pop Garden",
+  "short_name": "Bubble Pop",
+  "description": "Pop colorful garden bubbles with sparkles and musical notes. Free play or gentle color missions — made for ages 4–6.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a1c18",
+  "theme_color": "#0a1c18",
+  "categories": ["games", "kids", "entertainment"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

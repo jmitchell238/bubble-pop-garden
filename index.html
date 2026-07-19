@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a1c18" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Bubble Pop" />
+  <meta name="description" content="Pop colorful garden bubbles with sparkles and musical notes. Free play or gentle color missions — made for ages 4–6." />
+  <title>Bubble Pop Garden</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="stage">
+    <canvas id="cv" width="390" height="700"></canvas>
+    <div id="versionTag"></div>
+
+    <!-- MENU -->
+    <div class="screen" data-screen="menu" id="screenMenu">
+      <div class="menu-card">
+        <img class="logo-icon" src="icons/icon-192.png" alt="" width="72" height="72" />
+        <h1><span class="c1">Bubble</span> <span class="c2">Pop Garden</span></h1>
+        <p class="tagline">Pop · sparkle · musical notes</p>
+
+        <div class="stats">
+          <div><span class="lbl">Pops</span><strong id="statPops">0</strong></div>
+          <div><span class="lbl">Missions</span><strong id="statMissions">0</strong></div>
+        </div>
+
+        <button id="btnPlay" class="primary" type="button">▶  Play</button>
+
+        <p class="mode-label">Mode</p>
+        <div class="mode-row" id="modeRow" role="group" aria-label="Play mode">
+          <button type="button" class="mode-chip active" data-mode="free">Free Play</button>
+          <button type="button" class="mode-chip" data-mode="pop10">Pop 10</button>
+          <button type="button" class="mode-chip" data-mode="pop20">Pop 20</button>
+          <button type="button" class="mode-chip" data-mode="color">Color Hunt</button>
+        </div>
+
+        <button id="btnHow" class="secondary" type="button">How to play</button>
+        <button id="muteBtn" class="ghost" type="button">🔊 Sound on</button>
+        <button id="motionBtn" class="ghost" type="button">Full motion</button>
+        <button id="btnHub" class="ghost" type="button">← Arcade Hub</button>
+
+        <div id="howPanel" class="how hidden">
+          <ol>
+            <li>Bubbles float up from the garden. <b>Tap</b> one to pop it.</li>
+            <li>Every pop makes a <b>sparkle</b> and a little <b>note</b>.</li>
+            <li><b>Free Play</b> — pop anything, no goals.</li>
+            <li><b>Pop 10 / 20</b> — gentle missions; celebrate when done.</li>
+            <li><b>Color Hunt</b> — pop the color shown (wrong colors still pop, just don’t count).</li>
+            <li>No lives. No fail screens. Just garden fun.</li>
+          </ol>
+        </div>
+
+        <p id="versionMenu" class="ver"></p>
+      </div>
+    </div>
+
+    <!-- PLAY chrome -->
+    <button id="btnMenu" class="icon-btn play-chrome hidden" type="button" title="Menu">☰</button>
+
+    <!-- WIN -->
+    <div class="screen hidden" data-screen="win" id="screenWin">
+      <div class="menu-card">
+        <h2 id="winTitle">Garden cheer!</h2>
+        <p class="win-banner">✨ Mission complete</p>
+        <p class="tagline" id="winDetail">You popped them all</p>
+
+        <div class="stats tall">
+          <div><span class="lbl">This run</span><strong id="winPops">0</strong></div>
+          <div><span class="lbl">All-time</span><strong id="winAll">0</strong></div>
+        </div>
+
+        <button id="btnAgain" class="primary" type="button">▶  Play again</button>
+        <button id="btnMenuWin" class="secondary" type="button">Main menu</button>
+        <p id="versionWin" class="ver"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
