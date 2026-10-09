@@ -1,50 +1,51 @@
 # Bubble Pop Garden
 
-Pop colorful garden bubbles — sparkles, musical notes, zero fail. Built for ages **4–6**.
+Pop colorful bubbles in a garden. Each pop gives sparkles and a musical note, and there's no way to fail. Made for ages 4–6.
 
-**Play:** https://jmitchell238.github.io/bubble-pop-garden/
-
-Part of [Arcade Hub](https://jmitchell238.github.io/arcade-hub/).
-
----
+Play at https://jmitchell238.github.io/bubble-pop-garden/. It's one of the games in [Arcade Hub](https://jmitchell238.github.io/arcade-hub/).
 
 ## Modes
 
-| Mode | Who | What |
-|------|-----|------|
-| **Free Play** | 4+ | Pop anything, no goals |
-| **Pop 10 / 20** | 4–6 | Gentle count missions |
-| **Color Hunt** | ~6 | Pop only the asked color (wrong colors still pop, just don’t count) |
+| Mode | Ages | Goal |
+|------|------|------|
+| Free Play | 4+ | None, just pop |
+| Pop 10 / Pop 20 | 4–6 | Pop a set number of bubbles |
+| Color Hunt | ~6 | Pop only the color asked for. Other colors still pop, they just don't count. |
 
 ## Features
 
-- Slow floating bubbles, big touch targets
-- Musical note per color + confetti bursts
-- Sound mute + reduced motion
-- Installable PWA (offline after first visit)
-- Progress in `localStorage`
+- Slow bubbles with big tap targets
+- A different musical note for each color, and confetti
+- Mute and Calm motion settings
+- Progress saved in localStorage
+- Installable PWA that works offline after the first visit
 
-## Stack
+## For parents
 
-Static HTML / CSS / Canvas. No build step.
+- No lives, ads, accounts or fail screens.
+- Color Hunt never penalizes a wrong pop. It just gently repeats the color ("Try Red!").
+- Calm motion makes bubbles appear and rise more slowly.
 
-## Versioning
-
-- `GAME_VERSION` in `js/config.js`
-- Keep `CACHE` in `sw.js` in sync: `'bubble-pop-garden-' + GAME_VERSION`
-
-## Local preview
+## Running locally
 
 ```bash
 python3 -m http.server 8080
 ```
 
-## Parents
+Then open http://localhost:8080. The service worker needs `localhost` or HTTPS.
 
-- No lives, ads, accounts, or fail screens
-- Color Hunt never punishes — soft “try Red!” only
-- **Calm motion** slows spawn/rise for sensitive kids
+Plain HTML, CSS and canvas with no build step.
+
+## Tests
+
+```bash
+node tests/run.mjs
+```
+
+## Versioning
+
+When you bump `GAME_VERSION` in `js/config.js`, set `CACHE` in `sw.js` to `'bubble-pop-garden-' + GAME_VERSION`.
 
 ## License
 
-Personal project for family Arcade Hub.
+Personal project for the family.
